@@ -10,8 +10,6 @@ Environment Config
 ------------------
 
 =============== ===============================
-Name            Description
---------------- -------------------------------
 SECRET_KEY      Secret key used to sign payload
 URL_SCHEME      Scheme for urls generated
 KEEN_PROJECT_ID Keen IO Project ID
