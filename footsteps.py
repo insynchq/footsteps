@@ -34,5 +34,6 @@ def track(serialized):
 def create_app():
   app = Flask(__name__)
   app.register_blueprint(footsteps)
+  app.config['SERVER_NAME'] = os.environ.get('SERVER_NAME')
   app.debug = os.environ.get('DEBUG', False)
   return app
