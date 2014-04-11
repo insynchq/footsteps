@@ -14,7 +14,7 @@ def sign(url, **kwargs):
   global _app
   _app = _app or create_app()
   with _app.test_request_context():
-    payload = dict(**kwargs)
+    payload = dict(url=url, **kwargs)
     serialized = serializer.dumps(payload)
     return url_for('footsteps.track', serialized=serialized, _external=True,
                    _scheme=scheme)
